@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<title>APS 8° Semestre</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+#tabela_temp {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#tabela_temp td, #tabela_temp th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#tabela_temp tr:nth-child(even){background-color: #f2f2f2;}
+
+#tabela_temp tr:hover {background-color: #ddd;}
+
+#tabela_temp th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-green w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right w3-center" href="javascript:void(0)" onclick="myFunction()" title="Menu Navegacao"><i class="fa fa-bars"></i></a>
+    <a href="#home" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#greenFire" class="w3-bar-item w3-button w3-padding-large w3-hide-small">GREEN FIRE</a>
+    <a href="#objetivo" class="w3-bar-item w3-button w3-padding-large w3-hide-small">OBJETIVO</a>
+    <a href="#contato" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTATO</a>
+    <a href="#consultar" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-text-black">DADOS CLIMÁTICOS</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">SOLUÇÕES <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#app" class="w3-bar-item w3-button">Aplicativo GreenFire</a>
+        <a href="#comunicacao" class="w3-bar-item w3-button">Comunicação</a>
+        <a href="#futuras_solucoes" class="w3-bar-item w3-button">Futuras Soluções</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar em telas pequenas -->
+<div id="navDemo" class="w3-bar-block w3-green w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#greenFire" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">GREEN FIRE</a>
+  <a href="#objetivo" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">OBJETIVO</a>
+  <a href="#contato" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTATO</a>
+  <a href="#consultar" class="w3-bar-item w3-button w3-padding-large w3-hide-small">DADOS CLIMÁTICOS</a>
+  <a href="#solucoes" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SOLUÇÕES</a>
+</div>
+
+<!-- Conteúdo da pagina começa aqui -->
+<div id="home" class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Carrossel automatico -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="./imagens/forest-fire.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Incêndios Florestais</h3>
+      <p><b>Nós temos que lutar contra isto!</b></p>   
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="./imagens/amazonia.jpeg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Amazonas, Brasil</h3>
+      <p><b>A Amazônia ainda está queimando. O Brasil detém cerca de 60% da Floresta Amazônica. O Instituto de Pesquisa Espacial (INPE) reportou mais de 80.000 incêndios em 2019.</b></p>    
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="./imagens/berlim.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Brandenburg, Alemanha</h3>
+      <p><b>Em Abril de 2019, incêndios nas florestas de Brandenburg, ao norte de Berlim, na Alemanha, forçaram evacuação dos moradores das cidades de Klausdorf e Tiefenbrunnen.</b></p>    
+    </div>
+  </div>
+
+  <!-- Texto principal -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="greenFire">
+    <h2 class="w3-wide w3-hover-text-green">THE GREEN FIRE</h2>
+    <p class="w3-opacity"><i>Nós combatemos juntos!</i></p>
+    <p class="w3-justify">Após verificarmos a grande falta de suporte tecnológico ao problema das queimadas no Brasil, decidimos reunir informações sobre como o combate contra queimadas trabalha hoje em dia. Quais são as tecnologias utilizadas, quais inovações neste sentido, como o que temos hoje em dia trabalha em conjunto com nós para determos. Apesar dos esforços do governo brasileiro contra as queimadas serem grande, ainda nos resta poucos recursos, além da grande falta de recursos para investir neste sentido.</p>
+    <p class="w3-justify">O grande desmatamento da amazônia, por causas ilegais muitas vezes e as queimadas, trazem transtorno ano após ano. A grande falta de recursos e investimento tecnológico para também auxiliar no combate a incêndios, impede muitas oportunidades que temos em evoluir neste quesito. Temos então, como principal foco, reunir informações suficientes das tecnologias atuais que são utilizadas para o combate aos incêndios e também, o foco em realmente trazer algo funcional, onde iremos apresentar as possibilidades para solucionar este problema que a séculos gera perda ambiental. 
+        </p>
+        <h2 id="solucoes" class="w3-wide w3-hover-text-green" style="padding-top: 64px; padding-bottom: 10px;">SOLUÇÕES</h2>
+    <div class="w3-row" style="padding-top: 4px;"> 
+      <div class="w3-third">
+        <a href="#app"> <p>App GreenFire</p></a>
+        <a href="#app"><img src="./imagens/map.jpg" class="w3-round w3-margin-bottom" alt="Incêndio Florestal" style="width:60%"></a>
+      </div>
+      <div class="w3-third">
+        <a href="#comunicacao"> <p>Comunicação</p></a>
+        <a href="#comunicacao"><img src="./imagens/firefighter.jpg" class="w3-round w3-margin-bottom" alt="Incêndio Florestal" style="width:60%"></a>
+      </div>
+      <div class="w3-third">
+        <a href="#futuras_solucoes"> <p>Futuras Soluções</p></a>
+        <a href="#futuras_solucoes"><img src="./imagens/satellite.jpg" class="w3-round w3-margin-bottom" alt="Incêndio Florestal" style="width:60%"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Objetivo -->
+  <div class="w3-green" id="objetivo">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">O QUE FAZEMOS</h2>
+      <p class="w3-center"><i>Somos voluntários para ajudar nosso Planeta!</i></p><br>
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-margin-bottom">
+          <img src="./imagens/forest-fire.jpg" alt="Objetivo" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>O nosso objetivo</b></p>
+            <p>Incêndios florestais estão entre os desastre naturais mais complicados de serem previstos e os mais difíceis de serem controlados 
+              e combatidos, com dezenas de possíveis variáveis que possam afetar o trabalho das autoridades responsáveis, desde condições metereológicas 
+              a até mesmo intrusões humanas que podem alimentar as chamas, tornando o controle e combate uma tarefa ainda mais árdua do que o normal.</p>
+            <p>No século XXI, o estado da tecnologia permitiu que diferentes frentes pudessem contribuir com a causa, desde sensores e câmeras até 
+              drones e softwares de realidade virtual, ao passo que sistemas especializados como EYEFi, UraFire e AlarmEYE têm auxiliado as autoridades 
+              com a detecção e o controle e combate às queimadas.</p>
+              <p>O objetivo do projeto GREEN FIRE é trazer visibilidade à estas questões e apresentar novas propostas de soluções para prever e prevenir
+                tais catástrofes, buscando unir hardware e software de fácil manutenção a baixos custos.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Consulta API -->
+   <div id="consultar" class="w3-white">
+    <div class="w3-container w3-content w3-padding-16 w3-center" style="max-width:600px">
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <h2 class="w3-wide w3-center w3-hover-text-green">CONSULTAR TEMPERATURA GLOBAL</h2>
+        <div class="w3-margin-bottom">
+          <div class="w3-container w3-white w3-padding-32">
+            <p>"A atual taxa de aquecimento global não é natural. De 1880 a 1981 foi (0,07 ° C / 0,13 ° F) por década. Desde 1981, essa taxa aumentou para (0,18 ° C / 0,32 ° F)"</p>
+            <p>Os dados abaixo são coletados em tempo real pelo projeto GISS Surface Temperature Analysis (GISTEMP v4) da NASA e alimentam a base de dados global-warming.org (<a href="https://global-warming.org/" class="w3-hover-opacity">https://global-warming.org/</a>).</p>
+            <p><b>"Time"</b> se refere à data da coleta das informações, separada mensalmente. <b>"Station"</b>se refere às temperaturas coletadas pelas estações metereológicas e <b>"Land"</b> se refere à temperatura do solo. Todas as temperaturas são disponibilizadas em celsius</p>
+            <p class="w3-opacity "><i><b>Utilize o botão abaixo para consultar a temperatura global ao longo dos anos (desde 1880).</b></i></p>
+        </div>
+      </div>  
+      <button class="w3-button w3-black w3-section w3-wide" type="submit" onclick="userAction()">CONSULTAR</button>
+    </div>
+  </div>
+
+  <div id="table" class="w3-container w3-content w3-center" style="padding-bottom: 90px; ">
+      <table id="tabela_temp" class="table table-stripped">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Station</th>
+            <th>Land</th>
+          </tr>
+        </thead>
+        <tbody id="tbody_temp">
+        </tbody>
+      </table>
+  </div>
+
+  <div id="app" class="w3-white">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:600px">
+      <h2 class="w3-wide w3-center w3-hover-text-green">APLICATIVO GREENFIRE</h2>
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-margin-bottom">
+          <img src="./imagens/map.jpg" alt="App" style="width: 100%">
+          <div class="w3-container w3-white w3-padding-32">
+          <p><b>Sobre o Nosso Aplicativo</b></p>
+            <p>O nosso Aplicativo GreenFire tem como objetivo diminuir o tempo de comunicação que um incêndio florestal leva para ser notificado aos combatentes.
+              O app tem como uma de suas funções deportar um incêndio florestal baseado na localização atual e com isso
+              ele pode notificar todos os usuários do app a localização em que está ocorrendo um incêndio.
+            </p>
+            <p>Desta forma, a comunicação de um incêndio florestal leva muito menos tempo para chegar a usuários que podem ser combatentes voluntários,
+              ou até mesmo órgãos gorvanamentais responsáveis por combater estas catástrofes.</p>
+        </div>
+      </div>  
+    </div>
+  </div>
+
+  <div id="comunicacao" class="w3-white">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:600px">
+      <h2 class="w3-wide w3-center w3-hover-text-green">COMUNICAÇÃO</h2>
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-margin-bottom">
+          <img src="./imagens/firefighter.jpg" alt="App" style="width: 100%">
+          <div class="w3-container w3-white w3-padding-32">
+          <p><b>Como funciona a comunicação com os combatentes de incêndio?</b></p>
+            <p>No Brasil, a maioria dos sistemas que são utilizados para auxiliar no combate a incêndios, são sistemas tradicionais, que trata-se de câmeras instaladas nos locais onde tem-se o cuidado para precaver incêndios. Isto é, locais como áreas de reflorestamento, áreas comuns, unidades de conservação e reservas naturais. Estes sistemas, em muitos estados, são constituídos de apenas centrais remotas que fazem uso das câmeras para monitoramento das áreas florestais.</p>
+            <p>Como, por exemplo, no estado de Minas Gerais, as ações contra as queimadas tiveram melhores resultados graças à reação rápida dos órgãos responsáveis ao combate, que logo agiram para conter os incêndios, como relatado em uma notícia pela “Agência Minas Gerais” em 2019. Este bom desempenho dos combatentes envolvidos nos incêndios em Minas Gerais, como relatado pelo Instituto Estadual de Florestas (IEF), demonstra a necessidade de sistemas  de monitoramento amplificados, que poderiam ajudar ainda mais no controle das queimadas e também evitá-las.</p>
+            <p>O que fará com que combatentes de incêndios possam desenvolver uma reação muito mais rápida e eficaz, podendo agir com mais rapidez ao receber da central, informações sempre atualizadas sobre o que a rede WSN em conjunto com as câmeras foram capazes de identificar. Esta solução em que propomos neste projeto para prevenção de incêndios, ainda não foi implementada em boa parte do país.</p>
+        </div>
+      </div>  
+    </div>
+  </div>
+
+  <div id="futuras_solucoes" class="w3-white">
+    <div class="w3-container w3-content w3-padding-32" style="max-width:600px">
+      <h2 class="w3-wide w3-center w3-hover-text-green">FUTURAS SOLUÇÕES</h2>
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-margin-bottom">
+          <img src="./imagens/satellite.jpg" alt="App" style="width: 100%">
+          <div class="w3-container w3-white w3-padding-32">
+          <p><b>Reconhecimento de imagens</b></p>
+            <p>Todo o processo de reconhecimento terá suas particularidades, focando na finalidade para a qual será utilizada. No entanto, as regras gerais são semelhantes, por isso vamos descrevê-las aqui. As etapas seguintes desse processo partem da imagem que queremos “ler” até a decisão que o computador deve tomar, tendo como base a imagem recebida. 
+              Uma imagem digital representa uma matriz de valores numéricos.</p>
+              <p>Esses valores representam os dados associados ao pixel da imagem. A intensidade dos diferentes pixels, em média, para um único valor, representando-se em formato de matriz.
+              A informação fornecida aos sistemas de reconhecimento são as intensidades e a localização dos diferentes pixels na imagem. Com a ajuda dessas informações, os sistemas aprendem a mapear um relacionamento ou padrão nas imagens subsequentes fornecidas a eles, como parte do processo de aprendizagem. </p><p>Após a conclusão do processo de treinamento, o desempenho do sistema nos dados de teste é validado.
+              Alguns dos algoritmos usados no reconhecimento de imagem são SIFT (Scale-invariant Feature Transform), SURF (Speeded Up Robust Features), PCA (Principal Component Analysis) e LDA (Linear Discriminant Analysis).</p>
+        </div>
+      </div>  
+    </div>
+  </div>
+
+ 
+
+  <!-- Contato -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contato">
+    <h2 class="w3-wide w3-center">CONTATO</h2>
+    <p class="w3-opacity w3-center"><i>Se interessou pelo nosso motivo? Seja um voluntário e ajude seu planeta!</i></p>
+    <p class="w3-center w3-padding-32">Através do seu contato, você será convidado a ser um voluntário do combate aos incêndios florestais
+      e receberá um email contendo instruções para o que fazer ao encontrar um incêndio florestal.
+    </p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> São Paulo, BR<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: greenfireu8@gmail.com<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Nome" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="E-mail" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Mensagem" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">ENVIAR</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+<!-- Conteúdo da página acaba aqui -->
+</div>
+
+<!-- Inserir aqui imagem da localização no mapa
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%"> -->
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+ <h3 class="w3-wide">GREENFIRE</h3>
+</footer>
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Menu em telas pequenas
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+const userAction = async() => {
+
+  const proxyurl = "https://cors-anywhere.herokuapp.com/";
+  const urlDeFacto = "https://global-warming.org/api/temperature-api";
+  const response = await fetch(proxyurl + urlDeFacto);
+  const data = await response.json();
+
+  //var html = "";
+
+  var table = document.getElementById("tabela_temp");
+  var x = 1;
+
+  for (var i = 0; i < data.result.length; i++){
+    var row = table.insertRow(x);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+
+    cell1.innerHTML = data.result[i].time;
+    cell2.innerHTML = data.result[i].station;
+    cell3.innerHTML = data.result[i].land;
+    // html += "<tr>";
+    // html += "<td>" + data.result[i].time + "</td>";
+    // html += "<td>" + data.result[i].station + "</td>";
+    // html += "<td>" + data.result[i].land + "</td>";
+    // html += "</tr>";
+  }
+
+  //jQuery("#tbody_temp").append(html);
+  
+}
+</script>
+
+</body>
+</html>
